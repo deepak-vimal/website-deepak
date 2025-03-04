@@ -1,0 +1,40 @@
+---
+title: "Deepak Kumar"
+subtitle: "Research Assistant <br> St.john's College."
+image: images/deepak.jpg
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 70%
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/deepak-vimal
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/deepak-kumar-90b354247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+    - icon: twitter
+      text: Twitter
+      href: https://x.com/deepakvimal124
+---
+
+### Hello there! Welcome to my profile!
+i am Deepak kumar. i am enthusiasm to explore in research psychology background. i belongs to Agra, Uttar Pradesh. i have worked as research assistant in university of allahabad and st.johns college which is affilation by Dr. B. R. Ambedkar University, Agra.
+
+My academic path has been shaped by a strong interdisciplinary background and meaningful research experiences. During my time at the University of Allahabad, I had the privilege of engaging deeply with research, which refined my critical thinking and analytical skills. 
+
+I am also content creator in social media platform to make several content for Unique generative contents which is required to improve skills in softwares such as Adobe Premium Pro, Capcut, and Final cut pro. it enhance my skills in Content creation fields. 
+
+### Education
+University of Allahabad | Prayagraj, Uttar Pradesh.
+M.A. Psychology | July 2021 - August 2023
+
+University of Allahabad | Prayagraj, U.P
+Research Assistant | 2022 - 2023
+
+Gautam Hospital & Research Centre| Jaipur, Rajasthan.
+Inernship Training |Feb 2020 - Aug 2020
+
+St.John's College (Affiliation by) DBRAU | Agra, U.P
+Bachelor of Arts | August 2018 - May 2021
+
