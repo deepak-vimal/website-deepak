@@ -1,5 +1,10 @@
 project: 
   type: website
+  render:
+    - "*.{qmd,R,py}"
+    - "!utils.py"
+  preview: 
+    browser: true
   
 website: 
   title: "Deepak Kumar"
@@ -13,6 +18,7 @@ website:
 format:
   html:
     theme: lux
+    css: styles.css
     fontcolor: black
     linkcolor: white
     backgroundcolor: "#a1bbcc"
