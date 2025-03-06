@@ -8,19 +8,33 @@ project:
   
 website: 
   title: "Deepak Kumar"
+  site-url: "https://deepak-vimal.netlify.app/"
+  description: "meet the psychological values in your life"
+  twitter-card: true
   navbar: 
     left: 
       - text: "Home"
         href: index.qmd
       - text: "About"
         href: about.qmd
+    tools:
+      - icon: twitter
+        href: https://x.com/deepakvimal124
+      - icon: github
+        href: https://github.com/deepak-vimal
+      - icon: linkedin
+        href: https://www.linkedin.com/in/deepak-kumar-90b354247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+  page-footer: 
+        left: "Copyright 2025, Dr Ajay Koli"
+        center: "Made with ❤️"
+        right: "Supported by [SARA](https://sara-edu.netlify.ap)"
         
 format:
   html:
-    theme: lux
-    css: styles.css
-    fontcolor: black
-    linkcolor: white
-    backgroundcolor: "#a1bbcc"
-    monobackgroundcolor: red
-    mainfont: "quarto-light"
+    theme: quartz
+    #css: styles.css
+    #fontcolor: black
+    #linkcolor: white
+    #backgroundcolor: "#e6ecf5"
+    #monobackgroundcolor: red
+    #mainfont: "quarto-light"

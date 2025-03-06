@@ -1,11 +1,11 @@
 ---
 title: "Deepak Kumar"
-subtitle: "Research Assistant <br> St.john's College."
+subtitle: "Research Assistant in Psychology <br> St.john's College."
 image: images/deepak.jpg
 about:
-  template: trestles
+  template: solana
   image-shape: rounded
-  image-width: 70%
+  image-width: 35%
   links:
     - icon: github
       text: GitHub
