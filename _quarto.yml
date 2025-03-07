@@ -17,6 +17,10 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
+      - text: "More"
+        menu:
+            - trump.qmd
+          
     tools:
       - icon: twitter
         href: https://x.com/deepakvimal124

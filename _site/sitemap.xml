@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://deepak-vimal.netlify.app/index.html</loc>
-    <lastmod>2025-03-06T11:49:48.337Z</lastmod>
+    <loc>https://deepak-vimal.netlify.app/trump.html</loc>
+    <lastmod>2025-03-07T07:02:36.284Z</lastmod>
+  </url>
+  <url>
+    <loc>https://deepak-vimal.netlify.app/images/about.html</loc>
+    <lastmod>2025-03-05T05:29:14.495Z</lastmod>
   </url>
   <url>
     <loc>https://deepak-vimal.netlify.app/about.html</loc>
     <lastmod>2025-03-05T06:02:41.074Z</lastmod>
   </url>
   <url>
-    <loc>https://deepak-vimal.netlify.app/images/about.html</loc>
-    <lastmod>2025-03-05T05:29:14.495Z</lastmod>
+    <loc>https://deepak-vimal.netlify.app/index.html</loc>
+    <lastmod>2025-03-07T09:24:14.467Z</lastmod>
   </url>
 </urlset>
