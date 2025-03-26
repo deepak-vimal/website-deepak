@@ -20,6 +20,7 @@ website:
       - text: "More"
         menu:
             - trump.qmd
+            - deep-sea.qmd
           
     tools:
       - icon: twitter
