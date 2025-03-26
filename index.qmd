@@ -1,6 +1,6 @@
 ---
 title: "Deepak Kumar"
-subtitle: "Research Assistant in Psychology <br> St.john's College."
+subtitle: "Research Assistant in Psychology <br> University of Allahabad."
 image: images/deepak.jpg
 about:
   template: solana
@@ -23,7 +23,7 @@ I am Deepak kumar. I am enthusiasm to explore in research psychology background.
 
 My academic path has been shaped by a strong interdisciplinary background and meaningful research experiences. During my time at the University of Allahabad, I had the privilege of engaging deeply with research, which refined my critical thinking and analytical skills. 
 
-I am also content creator in social media platform to make several content for Unique generative contents which is required to improve skills in softwares such as Adobe Premium Pro, Capcut, and Final cut pro. it enhance my skills in Content creation fields. 
+I am a content creator on social media platforms, specializing in unique and generative content. To enhance my expertise in content creation, I continuously improve my skills in software such as Adobe Premiere Pro, CapCut, and Final Cut Pro.
 
 ### Education
 University of Allahabad | Prayagraj, Uttar Pradesh.
