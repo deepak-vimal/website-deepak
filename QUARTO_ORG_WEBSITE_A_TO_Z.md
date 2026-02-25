@@ -1,23 +1,41 @@
-# Build Your Organization Website in RStudio + Quarto (A to Z)
+# A–Z Guide: Build a Professional NGO Website (Like Vaagdhara Style) with RStudio + Quarto
 
-This guide explains how to create a website similar in structure to <https://vaagdhara.org/> using **RStudio + Quarto**, while customizing:
-- navbar items
-- site icon/favicon
-- logo
-- homepage text
-- auto-sliding image carousel with text overlay
+This guide gives a complete, practical process to create your NGO website with:
+- custom navbar
+- logo + favicon
+- homepage hero carousel (auto slide)
+- text overlay on images
+- modern sections (mission, impact, programs, gallery, contact)
+- mobile-friendly design
+
+> Goal: follow the **structure quality** of a site like `vaagdhara.org`, but use your **own branding, text, photos, and identity**.
 
 ---
 
-## 0) What you need
+## A. Plan before coding (important)
 
-- R (latest stable)
-- RStudio (latest stable)
-- Quarto (latest stable)
+Write these first in a notes file:
 
-Install Quarto: <https://quarto.org/docs/get-started/>
+1. NGO Name
+2. Tagline (1 line)
+3. Mission (2–3 lines)
+4. 4–6 main menu items
+5. 3 homepage highlight messages
+6. 8–15 real project photos
+7. Contact info + Google Maps link + social links
 
-Check installation in terminal:
+If you prepare this first, your website will look much better and more professional.
+
+---
+
+## B. Install required software
+
+Install:
+- **R**
+- **RStudio**
+- **Quarto**
+
+Check installation:
 
 ```bash
 quarto check
@@ -25,47 +43,47 @@ quarto check
 
 ---
 
-## 1) Create project in RStudio
+## C. Create a Quarto website project in RStudio
 
-1. Open **RStudio**.
-2. Go to **File → New Project → New Directory → Quarto Website**.
-3. Name your project (example: `my-org-website`).
-4. Click **Create Project**.
+1. Open RStudio.
+2. `File -> New Project -> New Directory -> Quarto Website`.
+3. Project name: `my-ngo-website`.
+4. Click Create.
 
-You will get key files like:
-- `_quarto.yml` (site config)
+You will get:
+- `_quarto.yml` (global website settings)
 - `index.qmd` (home page)
-- extra `.qmd` pages
+- sample pages
 
 ---
 
-## 2) Understand website structure
-
-Recommended folder layout:
+## D. Use this recommended folder structure
 
 ```text
-my-org-website/
-├─ _quarto.yml
-├─ index.qmd
-├─ about.qmd
-├─ programs.qmd
-├─ contact.qmd
-├─ styles.css
-├─ images/
-│  ├─ logo.png
-│  ├─ hero1.jpg
-│  ├─ hero2.jpg
-│  └─ hero3.jpg
-└─ docs/            # generated website output (optional)
+my-ngo-website/
+├── _quarto.yml
+├── index.qmd
+├── about.qmd
+├── programs.qmd
+├── impact.qmd
+├── gallery.qmd
+├── contact.qmd
+├── donate.qmd
+├── styles.css
+├── images/
+│   ├── logo.png
+│   ├── hero1.jpg
+│   ├── hero2.jpg
+│   ├── hero3.jpg
+│   └── (other images)
+└── docs/        # rendered output for GitHub Pages
 ```
-
-> Keep images in `images/` and use clean filenames.
 
 ---
 
-## 3) Configure site basics in `_quarto.yml`
+## E. Configure `_quarto.yml` (navbar, logo, icons)
 
-Use this starter config and edit names/colors/links:
+Replace your `_quarto.yml` with this starter:
 
 ```yaml
 project:
@@ -73,7 +91,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Your Organization Name"
+  title: "Your NGO Name"
   favicon: images/logo.png
   navbar:
     logo: images/logo.png
@@ -81,95 +99,73 @@ website:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About
+        text: About Us
       - href: programs.qmd
         text: Programs
+      - href: impact.qmd
+        text: Impact
+      - href: gallery.qmd
+        text: Gallery
       - href: contact.qmd
         text: Contact
+      - href: donate.qmd
+        text: Donate
     right:
       - icon: facebook
-        href: https://facebook.com/yourpage
+        href: https://facebook.com/yourngo
       - icon: instagram
-        href: https://instagram.com/yourpage
+        href: https://instagram.com/yourngo
       - icon: youtube
-        href: https://youtube.com/@yourchannel
+        href: https://youtube.com/@yourngo
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: styles.css
     toc: false
-```
-
-What you can change quickly:
-- `title` → site name
-- `favicon` and `navbar.logo` → your branding
-- `navbar.left/right` → menu and social icons
-- `theme` and `css` → look and feel
-
----
-
-## 4) Create your pages
-
-Create/edit these files:
-
-- `index.qmd` (homepage)
-- `about.qmd`
-- `programs.qmd`
-- `contact.qmd`
-
-Example `about.qmd`:
-
-```markdown
----
-title: "About"
----
-
-## Who We Are
-
-We are a community-focused organization working on education, livelihood, and local governance.
+    smooth-scroll: true
 ```
 
 ---
 
-## 5) Add homepage carousel with text overlay (auto sliding)
+## F. Build a strong homepage (`index.qmd`)
 
-In `index.qmd`, add this full block:
+Paste this in `index.qmd`:
 
 ```markdown
 ---
 title: "Home"
 ---
 
-<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
 
-  <div class="carousel-inner rounded-4 shadow">
+  <div class="carousel-inner hero-shadow rounded-4">
     <div class="carousel-item active">
-      <img src="images/hero1.jpg" class="d-block w-100 carousel-img" alt="Community work 1">
+      <img src="images/hero1.jpg" class="d-block w-100 carousel-img" alt="Community program image 1">
       <div class="carousel-caption custom-caption">
-        <h2>Empowering Communities</h2>
-        <p>Building sustainable futures together.</p>
+        <h2>Empowering Rural Communities</h2>
+        <p>Together we create dignity, opportunity, and local leadership.</p>
       </div>
     </div>
 
     <div class="carousel-item">
-      <img src="images/hero2.jpg" class="d-block w-100 carousel-img" alt="Community work 2">
+      <img src="images/hero2.jpg" class="d-block w-100 carousel-img" alt="Community program image 2">
       <div class="carousel-caption custom-caption">
-        <h2>Education for All</h2>
-        <p>Supporting children, youth, and families.</p>
+        <h2>Education, Health, and Livelihood</h2>
+        <p>Integrated programs for lasting social transformation.</p>
       </div>
     </div>
 
     <div class="carousel-item">
-      <img src="images/hero3.jpg" class="d-block w-100 carousel-img" alt="Community work 3">
+      <img src="images/hero3.jpg" class="d-block w-100 carousel-img" alt="Community program image 3">
       <div class="carousel-caption custom-caption">
-        <h2>Inclusive Growth</h2>
-        <p>Local partnerships for lasting change.</p>
+        <h2>Your Support Changes Lives</h2>
+        <p>Partner with us to scale impact for families and youth.</p>
       </div>
     </div>
   </div>
@@ -184,36 +180,63 @@ title: "Home"
   </button>
 </div>
 
-## Welcome to Our Organization
+## Our Mission
 
-Write your homepage intro here (mission, impact, location, call-to-action).
+We work with communities to advance rights, livelihoods, and inclusive development through participatory action.
+
+## What We Do
+
+- Education and child development
+- Women-led livelihood collectives
+- Climate and natural resource stewardship
+- Youth leadership and skills
+
+## Latest Impact Snapshot
+
+- 120+ villages reached
+- 18,000+ people engaged
+- 320+ women linked to livelihoods
+
+[Support Our Work](donate.qmd){.btn .btn-primary .btn-lg}
 ```
 
-- `data-bs-ride="carousel"` enables auto slide
-- `data-bs-interval="3000"` changes slide every 3 seconds
-- text inside `.carousel-caption` appears over image
+### Why this is better
+- Auto-runs slideshow (`data-bs-ride`) and keeps moving (`data-bs-pause="false"`).
+- Overlay text is readable on all images.
+- CTA button adds action, not just information.
 
 ---
 
-## 6) Style the carousel and navbar in `styles.css`
+## G. Add professional styling (`styles.css`)
+
+Paste this in `styles.css`:
 
 ```css
-/* Brand logo sizing in navbar */
+/* ---------- Brand ---------- */
 .navbar-brand img {
-  max-height: 42px;
+  max-height: 44px;
 }
 
-/* Carousel image height and crop behavior */
+.navbar {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Hero carousel ---------- */
 .carousel-img {
-  height: 70vh;
+  height: 72vh;
   object-fit: cover;
 }
 
-/* Text overlay style */
+.hero-shadow {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+
 .custom-caption {
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(0,0,0,.62), rgba(0,0,0,.28));
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  max-width: 700px;
+  margin-inline: auto;
 }
 
 .custom-caption h2,
@@ -221,150 +244,197 @@ Write your homepage intro here (mission, impact, location, call-to-action).
   color: #fff;
 }
 
-/* Small screen adjustments */
+/* ---------- Section spacing ---------- */
+main.content {
+  padding-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .carousel-img {
-    height: 45vh;
+    height: 48vh;
   }
 
   .custom-caption h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .custom-caption p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 }
 ```
 
 ---
 
-## 7) Add more sections to homepage
+## H. Create remaining pages quickly
 
-Below carousel in `index.qmd`, add quick blocks:
+### `about.qmd`
+- who you are
+- history
+- vision + mission
+- leadership/team photo
 
-- Mission
-- Key programs
-- Latest updates
-- Donate/Volunteer button
+### `programs.qmd`
+- each program with heading + image + short text
+- add 1 success story under each
 
-Example:
+### `impact.qmd`
+- key numbers
+- before/after outcomes
+- annual report PDF link
 
-```markdown
-## Our Mission
+### `gallery.qmd`
+- photos grouped by program/event
 
-To strengthen local communities through rights-based development.
+### `contact.qmd`
+Include:
+- address
+- email
+- phone
+- map link
+- social links
 
-## Key Programs
-
-- Education and Child Rights
-- Women and Livelihood
-- Natural Resource Governance
-```
-
----
-
-## 8) Add contact + map + social links
-
-In `contact.qmd`:
-
-```markdown
----
-title: "Contact"
----
-
-## Contact Us
-
-**Address:** Your office address
-
-**Email:** info@yourorg.org  
-**Phone:** +91-XXXXXXXXXX
-
-[Google Maps Location](https://maps.google.com)
-```
+### `donate.qmd`
+Include:
+- donation options (UPI, bank transfer, platform)
+- transparency statement
+- thank-you message
 
 ---
 
-## 9) Preview locally
+## I. Add image quality best practices
 
-Use either:
+To make website look premium:
 
-- RStudio **Render** button, or
-- terminal:
+1. Use landscape photos for hero (`1920x900` preferred).
+2. Compress images (TinyPNG/Squoosh).
+3. Keep each image usually under 300–500 KB.
+4. Use meaningful alt text for accessibility.
+
+---
+
+## J. Add trust-building sections (highly recommended)
+
+Add on homepage or About page:
+- Partners/Supporters logos
+- Testimonials
+- Annual report links
+- Registration / legal details
+- “Where funds go” chart image
+
+This increases credibility for donors and partners.
+
+---
+
+## K. Preview locally while editing
 
 ```bash
 quarto preview
 ```
 
-This starts a local server and auto-refreshes when you edit files.
+Use this mode to continuously review design and content.
 
 ---
 
-## 10) Build final website
+## L. Build production output
 
 ```bash
 quarto render
 ```
 
-If `output-dir: docs` is set, your site files will be generated in `docs/`.
+This generates final website in `docs/`.
 
 ---
 
-## 11) Deploy (easy option: GitHub Pages)
+## M. Publish on GitHub Pages
 
 1. Push project to GitHub.
-2. Open repository **Settings → Pages**.
-3. Set source to **Deploy from a branch**.
-4. Choose branch: `main`, folder: `/docs`.
+2. Go to `Settings -> Pages`.
+3. Source: `Deploy from a branch`.
+4. Branch: `main`, Folder: `/docs`.
 5. Save.
-6. Your website goes live in 1–5 minutes.
+6. Wait 1–5 minutes.
+
+Your website will be live.
 
 ---
 
-## 12) Keep design close to reference site, but your own brand
+## N. SEO and sharing setup (important)
 
-To make it “as it is like website” while still original:
+In `_quarto.yml`, add basic metadata under `website:`:
 
-- copy the **structure**, not exact text/assets
-- use your own logo, colors, typography
-- create your own sections and content
-- keep legal-safe original media and copy
+```yaml
+website:
+  title: "Your NGO Name"
+  site-url: "https://yourdomain.org"
+  description: "Community-led development NGO focused on education, livelihoods, and rights."
+```
 
----
-
-## 13) Common edits you asked for
-
-- Change navbar menu: `_quarto.yml` → `website.navbar.left`
-- Change social icons: `_quarto.yml` → `website.navbar.right`
-- Change logo/favicon: replace image + update paths in `_quarto.yml`
-- Change carousel images/text: `index.qmd`
-- Change animation speed: `data-bs-interval` in `index.qmd`
-- Change caption look: `styles.css`
+Also create custom social share image (1200x630).
 
 ---
 
-## 14) Suggested next upgrades
+## O. Suggested color and font strategy
 
-- multilingual site (English + Hindi)
-- blog/news updates section
-- events calendar
-- team member cards
-- impact counters
-- donation integration (Razorpay/Stripe links)
-- SEO + Open Graph metadata
+- Choose 2 brand colors + 1 accent color.
+- Use one clean font style (Quarto theme default is okay to start).
+- Keep high contrast for readability.
+- Avoid too many animations.
 
 ---
 
-## 15) Quick checklist before launch
+## P. 7-day practical launch plan
 
-- [ ] Mobile responsive check
-- [ ] Spelling and grammar reviewed
-- [ ] Fast image sizes (compressed)
-- [ ] Contact form or email visible
-- [ ] Social links working
-- [ ] HTTPS enabled (GitHub Pages does this)
-- [ ] Favicon/logo visible on browser tab and navbar
+### Day 1
+Set structure + navbar + pages.
+
+### Day 2
+Build homepage carousel and mission/impact sections.
+
+### Day 3
+Complete About + Programs pages.
+
+### Day 4
+Complete Impact + Gallery + Contact + Donate pages.
+
+### Day 5
+Polish design, spacing, and mobile responsiveness.
+
+### Day 6
+Proofread content + compress images + validate links.
+
+### Day 7
+Deploy to GitHub Pages + final QA.
 
 ---
 
-If you want, next I can generate a **ready-to-use starter `_quarto.yml`, `index.qmd`, `styles.css`, `about.qmd`, `contact.qmd`** for your organization name and colors.
+## Q. Final pre-launch checklist
+
+- [ ] Logo and favicon visible
+- [ ] Navbar links work
+- [ ] Carousel auto-slides smoothly
+- [ ] Text overlay readable on all slides
+- [ ] Mobile view tested
+- [ ] Contact details correct
+- [ ] Social links correct
+- [ ] Donate page functional
+- [ ] No spelling mistakes
+- [ ] Site deployed and opens on HTTPS
+
+---
+
+## R. Next step (if you want)
+
+I can generate a **fully customized starter kit** for your NGO with:
+- your NGO name
+- your navbar names
+- your color palette
+- your logo filename
+- 3 real hero captions for your mission
+
+Then you can directly paste and launch.
