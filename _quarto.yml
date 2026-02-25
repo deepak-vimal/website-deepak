@@ -1,27 +1,28 @@
-project: 
+project:
   type: website
   render:
     - "*.{qmd,R,py}"
     - "!utils.py"
-  preview: 
+  preview:
     browser: true
-  
-website: 
+
+website:
   title: "Deepak Kumar"
   site-url: "https://deepak-vimal.netlify.app/"
   description: "meet the psychological values in your life"
   twitter-card: true
-  navbar: 
-    left: 
+  navbar:
+    left:
       - text: "Home"
         href: index.qmd
       - text: "About"
         href: about.qmd
       - text: "More"
         menu:
-            - trump.qmd
-            - deep-sea.qmd
-          
+          - text: "Trump"
+            href: Trump.qmd
+          - text: "Deep Sea"
+            href: deep-sea.qmd
     tools:
       - icon: twitter
         href: https://x.com/deepakvimal124
@@ -29,17 +30,19 @@ website:
         href: https://github.com/deepak-vimal
       - icon: linkedin
         href: https://www.linkedin.com/in/deepak-kumar-90b354247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-  page-footer: 
-        left: "Copyright 2025, Dr Ajay Koli"
-        center: "Made with ❤️"
-        right: "Supported by [SARA](https://sara-edu.netlify.ap)"
-        
+  page-footer:
+    background: "#1a5c2a"
+    foreground: "light"
+    left: "© 2026 Vasundhara Seva Samiti. All rights reserved."
+    center: "Made with ❤️"
+    right: "Supported by [SARA](https://sara-edu.netlify.app)"
+
 format:
   html:
     theme: quartz
-    #css: styles.css
-    #fontcolor: black
-    #linkcolor: white
-    #backgroundcolor: "#e6ecf5"
-    #monobackgroundcolor: red
-    #mainfont: "quarto-light"
+    # css: styles.css
+    # fontcolor: black
+    # linkcolor: white
+    # backgroundcolor: "#e6ecf5"
+    # monobackgroundcolor: red
+    # mainfont: "quarto-light"
